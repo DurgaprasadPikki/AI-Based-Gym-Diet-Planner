@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup Intro</title>
+        <link rel="stylesheet" href="static/styles.css">
+    </head>
+    <body>
+        <img src="static/logo.png" alt="Logo" class="logo">
+        <div id="welcome" class="slideshow">
+            <div class="slide active"><h1>Welcome to <span style="color:#FF7200";>SMART FIT</SPAN></h1><p>Get ready to explore amazing body!</p></div>
+            <div class="slide"><h1>Get Best Diet and Work</h1><p>Unlock Your Body.</p></div>
+            <div class="slide"><h1>Join Our SMART FIT</h1><p>Be part of something bigger.</p></div>
+        </div>
+
+        <div id="signup" class="signup">
+            <h2>Sign Up</h2>
+            <p>Join us today and start your journey.</p>
+            <button onclick="showSignIn()">Get Started</button>
+        </div>
+
+        <div id="signin" class="signin">
+            <h2>Sign Up</h2>
+            <form onsubmit="event.preventDefault(); showDetailsForm();">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required><center>
+                <button type="submit" style="padding-bottom:20px";>Sign up</button></center>
+            </form>
+            <div class="login-container"><center>
+            <p>Already have an Account? <a href="/login">Login</a></center></p>
+            </div>
+        </div>
+
+            <div id="detailsForm" class="details-form">
+                <h2>Enter Your Details</h2>
+                <form action="/exp" >
+                    <input type="text" name="name" placeholder="Full Name" required>
+
+                    <!-- Gender Selection -->
+                    <div class="radio-group">
+            
+                        <label>Gender:
+                            <input style="width:5%;" type="radio" name="gender" value="veg"> Male
+                            <input style="width:5%;" width:"20%" type="radio" name="gender" value="non-veg"> Female
+                        </label>
+                    </datalist>
+                    <input type="number" name="age" placeholder="Age" required>
+                    <input type="number" name="height" placeholder="Height (cm)" required>
+                    <input type="number" name="weight" placeholder="Weight (kg)" required>
+
+                    <!-- Diet Preference -->
+                     
+                    <label>Meal Type:
+                        <input style="width:5%;" type="radio" name="meal" value="veg"> Veg
+                        <input style="width:5%;" width:"20%" type="radio" name="meal" value="non-veg"> Non-Veg
+                    </label>
+                    
+                    </datalist>
+                    
+                
+    <center>
+                    <button type="submit"><a href="/exp">Submit</a></button>
+            </center>
+                </form>
+            </div>
+
+        <script src="static/script.js"></script>
+    </body>
+    </html>

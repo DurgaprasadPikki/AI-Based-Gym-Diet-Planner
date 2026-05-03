@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    background: url('bg.jpeg') center center no-repeat;
+    background-size: cover;
+    color: #E0D9FF; /* Light Lavender for contrast */
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    position: relative;
+    padding-left: 5%; /* Push content slightly from the edge */
+}
+
+.slideshow {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start; /* Align left */
+    align-items: flex-start;
+    text-align: left;
+    transition: opacity 2s ease-in-out;
+}
+
+.slide {
+    display: none;
+    font-size: 32px;
+    font-weight: bold;
+    max-width: 80%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Glassmorphism Effect */
+.signup, .signin, .details-form {
+    position: absolute;
+    width: 25%; /* Smaller width to maintain space */
+    text-align: left; /* Align text to left */
+     /* Vibrant Purple */
+    padding: 30px;
+    height: 30%;
+    width:25%;
+    display: none;
+    top: 50%;
+    left: 10%; /* Move form towards left */
+    transform: translateY(-50%);
+ 
+}
+
+h2 {
+    font-weight: 700;
+    color: #E6D8FF; /* Soft pastel purple */
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+input {
+    width: 90%; /* Increase width */
+    padding: 12px 18px;
+    margin: 12px 0;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1); /* Light glass effect */
+    color: #E0D9FF; /* Light text for readability */
+    outline: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder {
+    color: #C4B3E3; /* Soft Lavender Placeholder */
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 8px rgba(160, 32, 240, 0.7); /* Purple glow */
+}
+
+button {
+    background: linear-gradient(90deg, #8A2BE2, #7A4FD4); /* Purple gradient */
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+    width: 60%; /* Adjust width */
+    text-align: center;
+
+}
+
+button:hover {
+    background: #B580FF; /* Lighter purple */
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth fading transitions */
+.signup, .signin, .details-form, .login {
+    border: 2px double white;
+    background:url('signin.jpg');
+    background-repeat: no-repeat;
+    background-size:100% 120%;
+    border-radius: 25px;
+    opacity: 0;
+    height: fit-content;
+    /* backdrop-filter: blur(5px); */
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+a {
+    color: rgb(191, 240, 32);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E6D8FF;
+}
+.logo {
+    position:absolute;
+
+    top: -10px; 
+    left: 20px; /* Adjust horizontal positioning */
+    width: 180px; /* Adjust size as needed */
+    height: 100px;
+
+}
